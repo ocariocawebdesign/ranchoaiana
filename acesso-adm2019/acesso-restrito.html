@@ -4,6 +4,12 @@
 <head>
   <meta charset="utf-8">
   <title>Rancho Aiana - Acesso</title>
+
+
+
+  <!-- Vue js -->
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+
 </head>
 
 
@@ -54,6 +60,7 @@
   <script language=javascript>
     senha = '123456';
     senhadig = prompt("Digite a senha", "")
+    obj.type = "password";
     if (senha != senhadig) {
       alert('Acesso negado!');
       top.location.href = 'erro.htm';
@@ -142,12 +149,14 @@
     <br>
 
     <audio id="demo" src="audio.mp3"></audio>
-    <center><div>
-      <button class="btn btn-secondary" onclick="document.getElementById('demo').play()">Reproduzir o áudio</button>
-      <button class="btn btn-secondary" onclick="document.getElementById('demo').pause()">Pausar o áudio</button>
-      <button class="btn btn-secondary" onclick="document.getElementById('demo').volume+=0.1">Aumentar o volume</button>
-      <button class="btn btn-secondary" onclick="document.getElementById('demo').volume-=0.1">Diminuir o volume</button>
-    </div></center>
+    <center>
+      <div>
+        <button class="btn btn-secondary" onclick="document.getElementById('demo').play()">Reproduzir o áudio</button>
+        <button class="btn btn-secondary" onclick="document.getElementById('demo').pause()">Pausar o áudio</button>
+        <button class="btn btn-secondary" onclick="document.getElementById('demo').volume+=0.1">Aumentar o volume</button>
+        <button class="btn btn-secondary" onclick="document.getElementById('demo').volume-=0.1">Diminuir o volume</button>
+      </div>
+    </center>
 
   </article>
 
@@ -156,6 +165,7 @@
   <footer class="text-center" style="font-size:16px;">&copy; 2019 Todos direitos reservados - Racnho Aiana</footer>
 
   <script src="js/bootstrap.min.js" charset="utf-8"></script>
+
 
 
 </body>
