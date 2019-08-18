@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt_BR" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Rancho Aiana - Acesso</title>
+</head>
+
+
+<link rel="stylesheet" href="css/bootstrap.min.css">
+
+<body>
+
+  <script type="text/javascript">
+    //desabilita menu de opcoes ao clicar no botao direito
+    function desabilitaMenu(e) {
+      if (window.Event) {
+        if (e.which == 2 || e.which == 3)
+          return false;
+      } else {
+        event.cancelBubble = true
+        event.returnValue = false;
+        return false;
+      }
+    }
+
+    //desabilita botao direito
+    function desabilitaBotaoDireito(e) {
+      if (window.Event) {
+        if (e.which == 2 || e.which == 3)
+          return false;
+      } else
+      if (event.button == 2 || event.button == 3) {
+        event.cancelBubble = true
+        event.returnValue = false;
+        return false;
+      }
+    }
+
+    //desabilita botao direito do mouse
+    if (window.Event)
+      document.captureEvents(Event.MOUSEUP);
+    if (document.layers)
+      document.captureEvents(Event.MOUSEDOWN);
+
+    document.oncontextmenu = desabilitaMenu;
+    document.onmousedown = desabilitaBotaoDireito;
+    document.onmouseup = desabilitaBotaoDireito;
+  </script>
+
+  <script src="js/castelo2.js" charset="utf-8"></script>
+
+
+  <script language=javascript>
+    senha = '123456';
+    senhadig = prompt("Digite a senha", "")
+    if (senha != senhadig) {
+      alert('Acesso negado!');
+      top.location.href = 'erro.htm';
+    }
+  </script>
+
+  <header>
+
+    <div class="container">
+      <center><img class="img-fluid" src="img/logo.png" alt=""></center>
+      <br>
+      <br>
+
+      <div class="alert alert-success" role="alert">
+        <h2>Acesso com sucesso!</h2>
+
+      </div>
+    </div>
+
+  </header>
+
+  <main>
+
+
+    <div class="container">
+      <div class="col-xm-12 col-sm-12 col-md-8 col-lg-8">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+          aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <br>
+      </div>
+    </div>
+
+    <br>
+    <div class="container">
+      <div class="row">
+        <div class="col-xm-12 col-sm-12 col-md-4 col-lg-4">
+          <div class="card" style="width: 18rem;">
+            <!--<img class="card-img-top" src=".../100px180/" alt="Card image cap">-->
+            <div class="card-body">
+              <h5 class="card-title text-uppercase">Cronograma de horários 2019</h5>
+              <p class="card-text"></p>
+              <a href="documentos/horario-teste.pdf" class="btn btn-primary" target="_blank" download="horario-teste.pdf(ver.0.1).pdf">Clique para download</a>
+              <!--<a href="#" class="btn btn-primary">Download formato PDF</a>-->
+            </div>
+          </div>
+        </div>
+        <div class="col-xm-12 col-sm-12 col-md-4 col-lg-4">
+
+          <div class="card" style="width: 18rem;">
+            <!--<img class="card-img-top" src=".../100px180/" alt="Card image cap">-->
+            <div class="card-body">
+              <h5 class="card-title text-uppercase">Cronograma de horários 2019</h5>
+              <p class="card-text"></p>
+              <a href="documentos/horario-teste.pdf" class="btn btn-primary" target="_blank" download="horario-teste.pdf(ver.0.1).pdf">Clique para download</a>
+              <!--<a href="#" class="btn btn-primary">Download formato PDF</a>-->
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xm-12 col-sm-12 col-md-4 col-lg-4">
+
+          <div class="card" style="width: 18rem;">
+            <!--<img class="card-img-top" src=".../100px180/" alt="Card image cap">-->
+            <div class="card-body">
+              <h5 class="card-title text-uppercase">Cronograma de horários 2019</h5>
+              <p class="card-text"></p>
+              <a href="documentos/horario-teste.pdf" class="btn btn-primary" target="_blank" download="horario-teste.pdf(ver.0.1).pdf">Clique para download</a>
+              <!--<a href="#" class="btn btn-primary">Download formato PDF</a>-->
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </main>
+
+  <article>
+
+    <div class="">
+
+      <center><iframe width="560" height="315" src="https://www.youtube.com/embed/fUW7qsXlC_E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+
+    </div>
+
+    <br>
+
+    <audio id="demo" src="audio.mp3"></audio>
+    <center><div>
+      <button class="btn btn-secondary" onclick="document.getElementById('demo').play()">Reproduzir o áudio</button>
+      <button class="btn btn-secondary" onclick="document.getElementById('demo').pause()">Pausar o áudio</button>
+      <button class="btn btn-secondary" onclick="document.getElementById('demo').volume+=0.1">Aumentar o volume</button>
+      <button class="btn btn-secondary" onclick="document.getElementById('demo').volume-=0.1">Diminuir o volume</button>
+    </div></center>
+
+  </article>
+
+  <br>
+
+  <footer class="text-center" style="font-size:16px;">&copy; 2019 Todos direitos reservados - Racnho Aiana</footer>
+
+  <script src="js/bootstrap.min.js" charset="utf-8"></script>
+
+
+</body>
+
+</html>
