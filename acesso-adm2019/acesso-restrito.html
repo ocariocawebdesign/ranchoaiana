@@ -57,10 +57,22 @@
   <script src="js/castelo2.js" charset="utf-8"></script>
 
 
+
+
+
   <script language=javascript>
+    function inObj(obj, msg) {
+
+      if (obj.name == "senha") {
+        if (obj.value == msg) {
+          obj.value = '';
+          obj.type = "password";
+        }
+      }
+    }
     senha = '123456';
     senhadig = prompt("Digite a senha", "")
-    obj.type = "password";
+
     if (senha != senhadig) {
       alert('Acesso negado!');
       top.location.href = 'erro.htm';
